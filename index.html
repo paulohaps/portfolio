@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-pt" class="scroll-smooth">
+<html lang="pt-br" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,12 +77,12 @@
 </head>
 <body class="text-brand-dark font-sans selection:bg-brand-sage/20 selection:text-brand-forest">
 
-    <!-- Navegação -->
+    <!-- Navegação Robusta para GitHub Pages -->
     <nav class="fixed top-0 left-0 right-0 z-50 p-4 md:p-6" role="navigation" aria-label="Navegação Principal">
-        <div class="nav-container max-w-6xl mx-auto">
+        <div class="max-w-6xl mx-auto">
             <div class="bg-white/95 backdrop-blur-md border border-brand-forest/5 rounded-[28px] md:rounded-[40px] px-5 md:px-10 py-3 md:py-5 flex justify-between items-center shadow-xl shadow-brand-forest/5">
                 <div class="flex items-center gap-4">
-                    <div class="w-10 h-10 md:w-12 md:h-12 bg-brand-forest rounded-xl flex items-center justify-center text-white font-bold shadow-lg">CS</div>
+                    <div class="w-10 h-10 md:w-12 md:h-12 bg-brand-forest rounded-xl flex items-center justify-center text-white font-bold shadow-lg" aria-hidden="true">CS</div>
                     <div class="flex flex-col text-left">
                         <span class="font-display font-bold text-sm md:text-lg leading-none tracking-tight">Cleycia Sales</span>
                         <span class="text-[9px] md:text-[10px] uppercase tracking-widest text-brand-sage font-extrabold">Engenharia Ambiental</span>
@@ -121,15 +121,13 @@
 
             <div class="flex-1 relative w-full flex justify-center lg:justify-end animate-fade-up" style="animation-delay: 0.2s">
                 <div class="w-full max-w-[450px] aspect-[4/5] bg-white rounded-[64px] shadow-2xl p-4 border border-gray-100 overflow-hidden relative">
-                    
                     <div class="w-full h-full bg-brand-cream rounded-[52px] flex items-center justify-center overflow-hidden">
                         <img src="foto-cleycia.jpg.png" alt="Engenheira Cleycia Sales" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <span class="hidden text-brand-forest/5 text-9xl font-bold select-none">CS</span>
                     </div>
-
                 </div>
                 
-                <!-- CORREÇÃO DO CARD (BADGE) AQUI -->
+                <!-- Badge de Autoridade (Correção de posição mantida) -->
                 <div class="absolute -bottom-6 md:-bottom-10 left-4 md:-left-10 bg-white p-5 md:p-8 rounded-[30px] md:rounded-[40px] shadow-2xl border border-brand-forest/5 max-w-[220px] md:max-w-[280px] animate-soft-bounce text-left">
                     <div class="flex items-center gap-3 mb-3 md:mb-4">
                         <div class="w-2.5 h-2.5 bg-brand-sage rounded-full"></div>
@@ -144,18 +142,18 @@
     </header>
 
     <!-- Áreas de Atuação -->
-    <section class="py-32 px-6 bg-white" id="atuacao">
+    <section class="py-32 px-6 bg-white" id="atuacao" aria-labelledby="atuacao-titulo">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-24">
-                <h2 class="text-4xl font-display font-bold mb-6 tracking-tight">Expertise Técnica</h2>
-                <p class="text-gray-500 max-w-xl mx-auto text-sm md:text-base font-light">Selecione uma área para entender como nossa consultoria protege o seu negócio.</p>
+                <h2 id="atuacao-titulo" class="text-4xl font-display font-bold mb-6 tracking-tight">Expertise Técnica</h2>
+                <p class="text-gray-500 max-w-xl mx-auto text-sm md:text-base font-light px-4">Selecione uma área para entender como nossa consultoria protege o seu negócio.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Licenciamento -->
                 <button onclick="openService('licenciamento')" class="service-btn group bg-brand-cream p-10 rounded-[48px] border border-transparent hover:border-brand-sage/30 hover:bg-white transition-all text-center focus:outline-none">
                     <div class="w-16 h-16 bg-white rounded-3xl flex items-center justify-center text-brand-forest mb-8 mx-auto shadow-sm group-hover:scale-110 transition-transform">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-width="1.5"></path></svg>
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-width="1.5"></path></svg>
                     </div>
                     <h3 class="font-bold text-sm uppercase tracking-widest mb-4">Licenciamento</h3>
                     <p class="text-[10px] text-brand-sage font-bold uppercase tracking-widest">EIA • RIMA • PCA</p>
@@ -164,34 +162,34 @@
                 <!-- Resíduos -->
                 <button onclick="openService('residuos')" class="service-btn group bg-brand-cream p-10 rounded-[48px] border border-transparent hover:border-brand-sage/30 hover:bg-white transition-all text-center focus:outline-none">
                     <div class="w-16 h-16 bg-white rounded-3xl flex items-center justify-center text-brand-forest mb-8 mx-auto shadow-sm group-hover:scale-110 transition-transform">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" stroke-width="1.5"></path></svg>
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" stroke-width="1.5"></path></svg>
                     </div>
-                    <h3 class="font-bold text-sm uppercase tracking-widest mb-4">Gestão de Resíduos</h3>
+                    <h3 class="font-bold text-sm uppercase tracking-widest mb-4 text-brand-forest text-center">Gestão de Resíduos</h3>
                     <p class="text-[10px] text-brand-sage font-bold uppercase tracking-widest">PGRS • PGRCC</p>
                 </button>
 
-                <!-- Auditoria -->
-                <button onclick="openService('auditoria')" class="service-btn group bg-brand-cream p-10 rounded-[48px] border border-transparent hover:border-brand-sage/30 hover:bg-white transition-all text-center focus:outline-none">
+                <!-- Consultoria e Auditoria (Upgrade Realizado Aqui) -->
+                <button onclick="openService('consultoria')" class="service-btn group bg-brand-cream p-10 rounded-[48px] border border-transparent hover:border-brand-sage/30 hover:bg-white transition-all text-center focus:outline-none">
                     <div class="w-16 h-16 bg-white rounded-3xl flex items-center justify-center text-brand-forest mb-8 mx-auto shadow-sm group-hover:scale-110 transition-transform">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-width="1.5"></path></svg>
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-width="1.5"></path></svg>
                     </div>
-                    <h3 class="font-bold text-sm uppercase tracking-widest mb-4">Auditoria</h3>
-                    <p class="text-[10px] text-brand-sage font-bold uppercase tracking-widest">Conformidade Legal</p>
+                    <h3 class="font-bold text-sm uppercase tracking-widest mb-4">Consultoria e Auditoria</h3>
+                    <p class="text-[10px] text-brand-sage font-bold uppercase tracking-widest">Consultoria Técnica</p>
                 </button>
 
                 <!-- CAR -->
                 <button onclick="openService('car')" class="service-btn group bg-brand-forest p-10 rounded-[48px] shadow-2xl hover:-translate-y-2 transition-all text-center text-white focus:outline-none">
                     <div class="w-16 h-16 bg-white/10 rounded-3xl flex items-center justify-center mb-8 mx-auto shadow-sm group-hover:scale-110 transition-transform">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-width="1.5"></path></svg>
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-width="1.5"></path></svg>
                     </div>
-                    <h3 class="font-bold text-sm uppercase tracking-widest mb-4 italic text-white">Cadastro Rural</h3>
-                    <p class="text-[10px] text-brand-sage font-bold uppercase tracking-widest text-left">CAR • Georreferenciamento</p>
+                    <h3 class="font-bold text-sm uppercase tracking-widest mb-4 italic text-white text-center">Cadastro Rural</h3>
+                    <p class="text-[10px] text-brand-sage font-bold uppercase tracking-widest">CAR • Georreferenciamento</p>
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- Modal de Detalhes -->
+    <!-- Modal Detalhado Acessível -->
     <div id="service-modal" class="modal-overlay fixed inset-0 z-[100] p-6 items-center justify-center" role="dialog" aria-modal="true">
         <div class="bg-white w-full max-w-xl rounded-[48px] p-8 md:p-14 relative shadow-2xl animate-fade-up">
             <button onclick="closeService()" class="absolute top-8 right-8 text-gray-300 hover:text-brand-dark p-2" aria-label="Fechar Detalhes">
@@ -230,13 +228,13 @@
                 title: 'Gestão Inteligente de Resíduos',
                 text: 'Desenvolvimento de Planos de Gerenciamento de Resíduos Sólidos (PGRS) e da Construção Civil (PGRCC). Focamos na optimização da logística e destinação final adequada, reduzindo passivos ambientais e custos.'
             },
-            auditoria: {
-                title: 'Auditoria de Conformidade',
-                text: 'Acompanhamento rigoroso das condicionantes ambientais e auditorias preventivas. Garantimos a segurança jurídica da sua atividade económica, monitorizando áreas de preservação e prevenindo sanções.'
+            consultoria: {
+                title: 'Consultoria e Auditoria Ambiental',
+                text: 'Consultoria estratégica completa e auditorias de conformidade legal. Oferecemos monitoramento ambiental contínuo, gestão de áreas de preservação permanente (APP/RL) e assessoria técnica preventiva. Garantimos que seu empreendimento opere dentro dos parâmetros legais, evitando autuações e promovendo a sustentabilidade do seu negócio.'
             },
             car: {
                 title: 'Regularização Rural (CAR e PRA)',
-                text: 'Soluções integradas para o Cadastro Ambiental Rural, Georreferenciamento e adesão ao PRA. Essencial para a segurança da propriedade, desembargo de áreas e acesso a linhas de crédito rural.'
+                text: 'Soluções integradas para o Cadastro Ambiental Rural, Georreferenciamento e adesão ao PRA. Essencial para a segurança da propriedade rústica, desembargo de áreas e acesso a linhas de crédito rural.'
             }
         };
 
