@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleycia Sales | Engenharia Ambiental</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            forest: '#2D4A3E', // Verde Floresta Profissional
+                            sage: '#8AA682',   // Verde Sálvia (Suave)
+                            cream: '#FDFCF8',  // Fundo Orgânico
+                            dark: '#1A2421',   // Texto Profundo
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Sora', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Correção de Layout para GitHub Pages/Mobile */
+        body { 
+            background-color: #FDFCF8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Modal Blur */
+        .modal-blur {
+            display: none;
+            background: rgba(26, 36, 33, 0.6);
+            backdrop-filter: blur(8px);
+        }
+        .modal-blur.active { display: flex; }
+
+        /* Animação suave de entrada */
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Estilo para evitar quebra no Navbar */
+        .nav-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="text-brand-dark font-sans">
+
+    <!-- Barra de Navegação Superior -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-4 md:py-6 pointer-events-none">
+        <div class="nav-container pointer-events-auto">
+            <div class="bg-white/90 backdrop-blur-md border border-brand-forest/5 rounded-[24px] md:rounded-[32px] px-4 md:px-8 py-3 md:py-4 flex justify-between items-center shadow-lg shadow-brand-forest/5">
+                
+                <!-- Nome / Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 md:w-11 md:h-11 bg-brand-forest rounded-xl flex items-center justify-center text-white font-bold shadow-lg">CS</div>
+                    <div class="flex flex-col">
+                        <span class="font-display font-bold text-sm md:text-base leading-none tracking-tight">Cleycia Sales</span>
+                        <span class="text-[9px] md:text-[10px] uppercase tracking-widest text-brand-sage font-bold">Engenharia Ambiental</span>
+                    </div>
+                </div>
+
+                <!-- Botão de Ação -->
+                <div>
+                    <a href="https://wa.me/5569984697372" target="_blank" class="bg-brand-dark text-white px-4 md:px-7 py-2.5 md:py-3.5 rounded-xl md:rounded-2xl text-[10px] md:text-[11px] font-bold uppercase tracking-widest hover:bg-brand-forest transition-all shadow-md active:scale-95 flex items-center gap-2">
+                        <span class="hidden sm:inline text-white/50">•</span> Consultoria Estratégica
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Principal (Hero) -->
+    <main class="pt-32 md:pt-52 pb-20 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+            
+            <div class="flex-1 fade-in">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-forest/5 rounded-full mb-8">
+                    <span class="w-1.5 h-1.5 bg-brand-forest rounded-full animate-pulse"></span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-brand-forest">Ji-Paraná / Rondônia</span>
+                </div>
+                
+                <h2 class="text-4xl md:text-6xl font-display font-bold leading-[1.15] mb-8">
+                    Segurança técnica para o seu <span class="text-brand-forest italic">negócio</span> prosperar.
+                </h2>
+                
+                <p class="text-lg text-gray-600/90 mb-12 max-w-xl leading-relaxed">
+                    Olá, sou a Cleycia. Minha missão é traduzir a complexidade das normas ambientais em soluções práticas e seguras para empreendedores rurais e urbanos.
+                </p>
+
+                <div class="flex flex-wrap gap-5">
+                    <a href="https://wa.me/5569984697372" target="_blank" class="px-10 py-5 bg-brand-forest text-white rounded-2xl font-bold shadow-2xl shadow-brand-forest/20 hover:scale-[1.02] transition-transform flex items-center gap-3">
+                        Agendar Análise Técnica
+                    </a>
+                    <a href="#servicos" class="px-10 py-5 bg-white text-brand-dark border border-gray-200 rounded-2xl font-bold hover:bg-gray-50 transition-colors">
+                        Conhecer Atuação
+                    </a>
+                </div>
+            </div>
+
+            <!-- Espaço da Imagem -->
+            <div class="flex-1 relative flex justify-center lg:justify-end w-full">
+                <div class="w-full max-w-[420px] aspect-[4/5] bg-white rounded-[50px] shadow-2xl p-3 border border-gray-100 overflow-hidden">
+                    <div class="w-full h-full bg-brand-forest/5 rounded-[40px] flex items-center justify-center text-brand-forest/10 text-9xl font-bold">
+                        CS
+                    </div>
+                </div>
+                <!-- Badge Flutuante -->
+                <div class="absolute -bottom-8 left-0 md:-left-8 bg-white p-6 rounded-[32px] shadow-2xl border border-gray-50 max-w-[260px] fade-in" style="animation-delay: 0.3s">
+                    <p class="text-xs font-semibold text-brand-forest italic mb-2">"Foco total na viabilidade do seu projeto ambiental."</p>
+                    <p class="text-[9px] font-bold uppercase tracking-widest text-gray-400">— Engª Cleycia Sales</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Grade de Áreas de Atuação -->
+    <section id="servicos" class="py-32 px-6 bg-white/50">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-20 text-center">
+                <h3 class="text-3xl font-display font-bold mb-4">Soluções Especializadas</h3>
+                <p class="text-gray-500 text-sm">Toque nos cards abaixo para entender como cada serviço protege sua operação.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Card Licenciamento -->
+                <div onclick="openService('licenciamento')" class="group bg-white p-10 rounded-[40px] border border-gray-100 shadow-sm hover:shadow-xl transition-all cursor-pointer">
+                    <div class="w-14 h-14 bg-brand-forest/5 rounded-2xl flex items-center justify-center text-brand-forest mb-8 group-hover:bg-brand-forest group-hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-width="1.5"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest mb-3">Licenciamento</h4>
+                    <p class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em]">EIA • RIMA • PCA</p>
+                </div>
+
+                <!-- Card Resíduos -->
+                <div onclick="openService('residuos')" class="group bg-white p-10 rounded-[40px] border border-gray-100 shadow-sm hover:shadow-xl transition-all cursor-pointer">
+                    <div class="w-14 h-14 bg-brand-forest/5 rounded-2xl flex items-center justify-center text-brand-forest mb-8 group-hover:bg-brand-forest group-hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" stroke-width="1.5"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest mb-3">Gestão de Resíduos</h4>
+                    <p class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em]">PGRS • PGRCC</p>
+                </div>
+
+                <!-- Card Auditoria -->
+                <div onclick="openService('auditoria')" class="group bg-white p-10 rounded-[40px] border border-gray-100 shadow-sm hover:shadow-xl transition-all cursor-pointer">
+                    <div class="w-14 h-14 bg-brand-forest/5 rounded-2xl flex items-center justify-center text-brand-forest mb-8 group-hover:bg-brand-forest group-hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-width="1.5"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest mb-3">Auditoria</h4>
+                    <p class="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em]">Conformidade Legal</p>
+                </div>
+
+                <!-- Card CAR -->
+                <div onclick="openService('car')" class="group bg-brand-forest p-10 rounded-[40px] shadow-2xl hover:translate-y-[-4px] transition-all cursor-pointer text-white">
+                    <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-8 mx-auto">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-width="1.5"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-sm uppercase tracking-widest mb-3">Cadastro Rural</h4>
+                    <p class="text-[10px] text-white/50 font-bold uppercase tracking-[0.2em] italic leading-none">CAR • Georreferenciamento</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Dinâmico -->
+    <div id="service-modal" class="modal-blur fixed inset-0 z-[100] p-6 items-center justify-center">
+        <div class="bg-white w-full max-w-xl rounded-[40px] p-8 md:p-12 relative shadow-2xl border border-gray-100 scale-95 transition-transform">
+            <button onclick="closeService()" class="absolute top-6 right-6 text-gray-300 hover:text-brand-dark">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-width="2"></path></svg>
+            </button>
+            <div id="modal-content">
+                <!-- Conteúdo Injetado via JS -->
+            </div>
+            <div class="mt-12 flex justify-center">
+                <a href="https://wa.me/5569984697372" target="_blank" class="w-full bg-brand-forest text-white py-5 rounded-2xl font-bold text-sm shadow-xl shadow-brand-forest/20 text-center hover:bg-brand-dark transition-colors">
+                    Solicitar Orçamento via WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-20 bg-brand-dark text-white text-center">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col items-center">
+            <h4 class="text-2xl font-display font-bold mb-10 tracking-tight">Cleycia Sales <span class="text-brand-sage font-normal">• Engenharia Ambiental</span></h4>
+            <div class="h-[1px] w-20 bg-white/10 mb-10"></div>
+            <div class="flex gap-10 text-[10px] uppercase font-bold tracking-[0.3em] text-white/30">
+                <span>Ji-Paraná, RO</span>
+                <span>© 2026</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const serviceData = {
+            licenciamento: {
+                title: 'Licenciamento Ambiental Estratégico',
+                text: 'A elaboração de estudos como EIA/RIMA e PCA é o coração da regularidade de qualquer grande projeto. Atuo na condução desses processos junto aos órgãos competentes, garantindo que seu cronograma de obras não seja afetado por entraves burocráticos.'
+            },
+            residuos: {
+                title: 'Plano de Gerenciamento de Resíduos',
+                text: 'Desenvolvo o PGRS e PGRCC personalizados para a realidade do seu negócio ou canteiro de obras. Uma gestão inteligente de resíduos não apenas cumpre a lei, mas gera economia operacional e reduz passivos ambientais.'
+            },
+            auditoria: {
+                title: 'Auditoria de Conformidade Legal',
+                text: 'Mantenha sua empresa protegida contra multas e sanções. Realizo o monitoramento contínuo das condicionantes ambientais, auditorias preventivas e a gestão de áreas de preservação, assegurando que nada saia do controle.'
+            },
+            car: {
+                title: 'Regularização Rural (CAR e PRA)',
+                text: 'A segurança da sua terra depende da regularização ambiental. Realizo o Cadastro Ambiental Rural (CAR), Georreferenciamento e adesão ao Programa de Regularização Ambiental (PRA), essencial para desembargos e acesso a crédito rural.'
+            }
+        };
+
+        function openService(key) {
+            const data = serviceData[key];
+            const content = `
+                <div class="inline-block px-4 py-1.5 bg-brand-forest/5 rounded-full mb-6">
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-brand-forest">Especialidade Técnica</span>
+                </div>
+                <h3 class="text-3xl font-display font-bold text-brand-dark mb-6">${data.title}</h3>
+                <p class="text-gray-600 leading-relaxed text-base">${data.text}</p>
+            `;
+            document.getElementById('modal-content').innerHTML = content;
+            document.getElementById('service-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeService() {
+            document.getElementById('service-modal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fechar modal ao clicar fora dele
+        document.getElementById('service-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeService();
+        });
+
+        // Suavização do Navbar ao rolar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav div div');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'md:py-3', 'shadow-2xl');
+                nav.classList.remove('py-3', 'md:py-4');
+            } else {
+                nav.classList.remove('py-2', 'md:py-3', 'shadow-2xl');
+                nav.classList.add('py-3', 'md:py-4');
+            }
+        });
+    </script>
+</body>
+</html>
+
